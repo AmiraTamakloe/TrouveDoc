@@ -17,9 +17,9 @@ export class MedecinFormCreationComponent implements OnInit {
   medecinForm = this.formBuilder.group({
     prenom: ["", Validators.required],
     nom: ["", Validators.required],
-    specialite: ["", Validators.required],
+    specialite: [""],
     anneesexperience: ["", Validators.required],
-    idservice: ["", Validators.required],
+    idservice: [""],
   });
 
   constructor(

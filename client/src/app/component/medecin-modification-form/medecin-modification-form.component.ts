@@ -43,12 +43,12 @@ export class MedecinModificationFormComponent implements OnInit {
     this.medecinForm = this.formBuilder.group({
       prenom: [this.data.medecin.prenom, Validators.required],
       nom: [this.data.medecin.nom, Validators.required],
-      specialite: [this.data.medecin.specialite, Validators.required],
+      specialite: [this.data.medecin.specialite],
       anneesexperience: [
         +this.data.medecin.anneesexperience,
-        Validators.required,
+        Validators.required
       ],
-      idservice: [this.data.medecin.idservice, Validators.required],
+      idservice: [this.data.medecin.idservice],
     });
   }
 

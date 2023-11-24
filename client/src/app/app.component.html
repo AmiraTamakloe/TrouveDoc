@@ -1,18 +1,23 @@
-<div>
+<div style="background: radial-gradient(circle at 10% 20%, rgb(163, 175, 243) 0%, rgb(220, 182, 232) 100.2%); height: 100vh;">
+
   <nav class="navbar navbar-dark bg-dark main-nav">
-    <a class="navbar-brand title" href="/" matTooltip="Retournez à l'accueil">INF3710 - TP4</a>
+    <a class="navbar-brand title" href="/" matTooltip="Retournez à l'accueil">trouve doc</a>
     <div class="navbar-expand mr-auto">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" routerLink="/medecin">Médecins</a>
       </div>
     </div>
   </nav>
 
   <div class="home" *ngIf="route == ''">
-    <p>
-      Trouve Doc
-    </p>
-    <button mat-raised-button color="primary" class="btn" routerLink="/medecin">Parcourir la liste des Médecins<mat-icon>arrow_right</mat-icon></button>
+    <a class="navbar-brand title-3">Bienvenue sur </a>
+    <a class="navbar-brand title-4">trouve doc! </a>
+    <button mat-raised-button color="primary" class="btn"  routerLink="/create">Ajouter un médecin<mat-icon>arrow_right</mat-icon></button>
+    <button mat-raised-button color="primary" class="btn" routerLink="/medecin">Liste des Médecins<mat-icon>arrow_right</mat-icon></button>
   </div>
   <router-outlet></router-outlet>
-</div>
+  <div class="bg-dark footer">
+      <a class="navbar-brand title-2">INF3710 - TP4</a>
+    <div class="navbar-expand mr-auto">
+  </div>
+
+

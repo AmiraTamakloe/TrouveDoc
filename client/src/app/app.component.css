@@ -1,39 +1,96 @@
 .title {
   color: rgba(154, 117, 240, 1);
   font-family: 'Roboto', sans-serif;
-  margin-left: 10px;
+  left: 1%;
+  font-size: 22pt;
   font-weight: bold;
 }
 
+.title-2 {
+  position: absolute;
+  top:35%;
+  color: rgba(154, 117, 240, 1);
+  font-family: 'Roboto', sans-serif;
+  left: 1%;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.title-3 {
+  position: absolute;
+  top:15%;
+  font-family: 'Roboto', sans-serif;
+align-self: center;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.title-4 {
+  position: absolute;
+  top:20%;
+  font-family: 'Roboto', sans-serif;
+align-self: center;
+  font-size: 50pt;
+  font-weight: bold;
+}
+
+
 .home {
   display: flex;
+  left: 25%;
   flex-direction: column;
   align-content: center;
-  align-items: center;
+  align-items:center;
   justify-content:center;
-  width: 80%;
-  margin-left: 10.5%;
+  width: 50%;
+  height: 70%;
   font-family: 'Roboto', sans-serif;
   line-height: normal;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 60px;
-  text-align: center;
+  font-size: 40pt;
+  text-shadow: 10%;
   background: rgba(154, 117, 240, 0.4);
-  padding-top: 2%;
+  padding-top: 0%;
   padding-bottom: 2%;
+  border-radius: 10px;
+}
+.homeName{
+  position:absolute;
+  font-size: 20pt;
+  top:1%;
 }
 
 .btn {
-  margin-top: 1%;
-  font-size: 20px;
+  margin-top: 2%;
+  top: 15%;
+  font-size: 15pt;
   font-family: 'Roboto', sans-serif;
-  padding: 10px;
+  border-radius: 10px;
+  height:15%;
+  width: 70%;
 }
 
 .main-nav {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   padding: 1%;
+}
+
+.footer {
+  position: absolute;
+  top:94.5%;
+  height: 5.5%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  padding: 1%;
+  color: white;  
+}
+
+.footerInfo {
+  position: absolute;
+  font-size: 15pt;
+  top:30%;
 }
