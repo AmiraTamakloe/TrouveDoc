@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>Modification information d'un médecin</h2>
+<mat-dialog-content>
+  <form [formGroup]="medecinForm" (ngSubmit)="onSubmit()">
+    <label for="idservice">Service : </label>
+    <select id="idservice" formControlName="idservice" required>
+      <option *ngFor="let service of services" [value]="service.idservice">
+        {{ service.idservice }}
+      </option>
+    </select>
+
+    <label for="specialite">Spécialité: </label>
+    <select id="specialite" formControlName="specialite" required>
+      <option *ngFor="let service of services" [value]="service.nomservice">
+        {{ service.nomservice }}
+      </option>
+    </select>
+
+    <label for="prenom">Prénom : </label>
+    <input id="prenom" type="text" formControlName="prenom" />
+
+    <label for="nom">Nom : </label>
+    <input id="nom" type="text" formControlName="nom" />
+
+    <label for="anneesexperience">Années experiences : </label>
+    <input
+      id="anneesexperience"
+      type="number"
+      formControlName="anneesexperience"
+    />
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="cancelAction()">Annuler</button>
+  <button
+    mat-button
+    [disabled]="!medecinForm.valid"
+    cdkFocusInitial
+    (click)="onSubmit()"
+  >
+    Confirmer
+  </button>
+</mat-dialog-actions>

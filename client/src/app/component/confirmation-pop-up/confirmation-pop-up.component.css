@@ -1,0 +1,29 @@
+h2.mat-dialog-title {
+    text-align: center;
+    color: #3f51b5;
+  }
+  
+  mat-dialog-content {
+    font-size: 16px;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  mat-dialog-actions {
+    justify-content: space-around;
+  }
+  
+  mat-dialog-actions button {
+    color: #fff;
+    background-color: #3f51b5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  mat-dialog-actions button:hover {
+    background-color: #303f9f;
+  }
