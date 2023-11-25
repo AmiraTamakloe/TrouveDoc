@@ -121,7 +121,8 @@ export class MedecinComponent implements OnInit {
 
   deleteHotel(idMedecin: string): void {
     const dialogRef = this.dialog.open(ConfirmationPopUpComponent, {
-      width: "250px",
+      height: '30%',
+      width: '25%',
       data: { message: "Deleting is permanent! click confirm if you want to pursue this action " },
     });
     dialogRef.afterClosed().subscribe((result) => {
@@ -139,7 +140,8 @@ export class MedecinComponent implements OnInit {
 
   editHotel(medecin: Medecin): void {
     const dialogRef = this.dialog.open(MedecinModificationFormComponent, {
-      width: "250px",
+      height: '80%',
+      width: '25%',
       data: { medecin: medecin },
     });
     dialogRef.afterClosed().subscribe((result: Medecin) => {

@@ -27,3 +27,11 @@ h2.mat-dialog-title {
   mat-dialog-actions button:hover {
     background-color: #303f9f;
   }
+
+  .btnLays  {
+    width:40%;
+    margin-top: 10%;
+  }
+
+
+ 
