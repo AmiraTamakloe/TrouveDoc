@@ -1,4 +1,4 @@
-<h1>Médecins</h1>
+<button mat-raised-button color="primary" routerLink="/create"  class="buttonAdd">+ Ajouter un médecin</button>
 <table mat-table [dataSource]="medecins" class="mat-elevation-z8">
   <ng-container matColumnDef="prenom">
     <th mat-header-cell *matHeaderCellDef>Prénom</th>
@@ -28,8 +28,8 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef>Actions</th>
     <td mat-cell *matCellDef="let medecin">
-      <a mat-raised-button (click)="editHotel(medecin)">Edit</a>
-      <a mat-raised-button (click)="deleteHotel(medecin.idmedecin)">Delete</a>
+      <a mat-raised-button (click)="editHotel(medecin)" color="primary">Edit</a>
+      <a mat-raised-button (click)="deleteHotel(medecin.idmedecin)" color="warn" class="delButtons"><mat-icon>delete</mat-icon></a>
     </td>
   </ng-container>
 
@@ -39,9 +39,5 @@
 <mat-paginator
   [pageSizeOptions]="[20, 10, 15]"
   showFirstLastButtons
-  aria-label="Select hotels"
->
+  aria-label="Select hotels" class="bottomPage">
 </mat-paginator>
-<button class="add" routerLink="/create">
-  <mat-icon>+</mat-icon>
-</button>
