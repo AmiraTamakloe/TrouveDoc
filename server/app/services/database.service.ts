@@ -20,7 +20,7 @@ export class DatabaseService {
   public async getMedecins(): Promise<pg.QueryResult> {
     const client: pg.PoolClient = await this.pool.connect();
     const result: pg.QueryResult = await this.pool.query(
-      "Select * from TP5.Medecins"
+      "Select * from Hopital_BD.Medecins"
     );
     client.release();
     return result;
@@ -29,7 +29,7 @@ export class DatabaseService {
   public async getServices(): Promise<pg.QueryResult> {
     const client: pg.PoolClient = await this.pool.connect();
     const result: pg.QueryResult = await this.pool.query(
-      "Select * from TP5.Services"
+      "Select * from Hopital_BD.Services"
     );
     client.release();
     return result;
@@ -44,7 +44,7 @@ export class DatabaseService {
       medecin.anneesexperience,
       medecin.idservice,
     ];
-    const query: string = `INSERT INTO TP5.Medecins ( prenom, nom, specialite, anneesExperience, idService) VALUES ($1, $2, $3, $4, $5)`;
+    const query: string = `INSERT INTO Hopital_BD.Medecins ( prenom, nom, specialite, anneesExperience, idService) VALUES ($1, $2, $3, $4, $5)`;
     const result: pg.QueryResult = await this.pool.query(query, values);
     client.release();
     return result;
@@ -52,7 +52,7 @@ export class DatabaseService {
 
   public async deleteMedecin(idMedecin: string): Promise<pg.QueryResult> {
     const client: pg.PoolClient = await this.pool.connect();
-    const query: string = `DELETE FROM TP5.Medecins WHERE idMedecin = '${idMedecin}'`;
+    const query: string = `DELETE FROM Hopital_BD.Medecins WHERE idMedecin = '${idMedecin}'`;
     const result: pg.QueryResult = await this.pool.query(query);
     client.release();
     return result;
@@ -60,7 +60,7 @@ export class DatabaseService {
 
   public async updateMedecinInfo(medecin: any): Promise<pg.QueryResult> {
     const client: pg.PoolClient = await this.pool.connect();
-    const query: string = `UPDATE TP5.Medecins SET prenom = '${medecin.prenom}', nom = '${medecin.nom}', specialite = '${medecin.specialite}', anneesExperience = ${medecin.anneesexperience}, idService = ${medecin.idservice} WHERE idMedecin = ${medecin.idmedecin}`;
+    const query: string = `UPDATE Hopital_BD.Medecins SET prenom = '${medecin.prenom}', nom = '${medecin.nom}', specialite = '${medecin.specialite}', anneesExperience = ${medecin.anneesexperience}, idService = ${medecin.idservice} WHERE idMedecin = ${medecin.idmedecin}`;
     console.log(query);
     const result: pg.QueryResult = await this.pool.query(query);
     console.log(result);

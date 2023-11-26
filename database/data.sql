@@ -1,5 +1,5 @@
 -- Services
-INSERT INTO TP5.Services (idService, nomService)
+INSERT INTO Hopital_BD.Services (idService, nomService)
 VALUES
     (0, 'Dermatologie'),
     (1, 'Neurologie'),
@@ -13,7 +13,7 @@ VALUES
     (9, 'Radiologie');
 
 -- Medecins
-INSERT INTO Medecins ( prenom, nom, specialite, anneesExperience, idService)
+INSERT INTO Hopital_BD.Medecins ( prenom, nom, specialite, anneesExperience, idService)
 VALUES
     ('Marie', 'Rousseau', 'Dermatologie', 8, 3),
     ('Philippe', 'Lemelin', 'Neurologie', 6, 4),

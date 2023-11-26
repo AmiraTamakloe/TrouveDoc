@@ -1,13 +1,13 @@
-DROP SCHEMA IF EXISTS TP5 CASCADE;
-CREATE SCHEMA IF NOT EXISTS TP5;
-SET search_path=TP5;
+DROP SCHEMA IF EXISTS Hopital_BD CASCADE;
+CREATE SCHEMA IF NOT EXISTS Hopital_BD;
+SET search_path=Hopital_BD;
 
-CREATE TABLE IF NOT EXISTS TP5.Services (
+CREATE TABLE IF NOT EXISTS Hopital_BD.Services (
     idService 				INT PRIMARY KEY,
     nomService 				VARCHAR(50)
 );
 
-CREATE TABLE IF NOT EXISTS TP5.Medecins (
+CREATE TABLE IF NOT EXISTS Hopital_BD.Medecins (
     idMedecin 				SERIAL PRIMARY KEY,
     prenom 					VARCHAR(50),
     nom 					VARCHAR(50),

@@ -44,6 +44,23 @@ export class MedecinFormCreationComponent implements OnInit {
 
   onSubmit(): void {
     if (this.medecinForm.valid) {
+      const regex = /^[a-zA-ZÀ-ÿ]+(?:-[a-zA-ZÀ-ÿ]+)?$/;
+      if (!regex.test(this.medecinForm.controls["nom"].value)) {
+        this.matSnackBar.open("Le nom ne doit pas contenir de chiffre ou de caractère spéciaux", "x", {
+          duration: 4000,
+          verticalPosition: "top",
+          horizontalPosition: "center",
+        });
+        return;
+      }
+      if (!regex.test(this.medecinForm.controls["prenom"].value)) {
+        this.matSnackBar.open("Le prénom ne doit pas contenir de chiffre ou de caractère spéciaux. Les noms composés avec un seul trait d'union sont accepté", "x", {
+          duration: 4000,
+          verticalPosition: "top",
+          horizontalPosition: "center",
+        });
+        return;
+      }
       if (this.medecinForm.controls["anneesexperience"].invalid || this.medecinForm.controls["anneesexperience"].value <= 0 || this.medecinForm.controls["anneesexperience"].value > 100) {
         this.matSnackBar.open("Les années d'expériences doivent être un chiffre positif n'excédant pas 100", "x", {
           duration: 4000,

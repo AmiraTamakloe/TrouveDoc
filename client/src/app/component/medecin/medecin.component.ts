@@ -123,7 +123,7 @@ export class MedecinComponent implements OnInit {
     const dialogRef = this.dialog.open(ConfirmationPopUpComponent, {
       height: '30%',
       width: '25%',
-      data: { message: "Deleting is permanent! click confirm if you want to pursue this action " },
+      data: { message: "La suppresion est permanente! Appuyer confirmer pour supprimer définitivement " },
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
@@ -151,13 +151,13 @@ export class MedecinComponent implements OnInit {
           .subscribe(async (medecin: Medecin) => {
             if (medecin) {
               await this.fetchData();
-              this.matSnackBar.open("The values were correctly updated", "x", {
+              this.matSnackBar.open("La modification a été effectué dans la base de donnée", "x", {
                 duration: 3000,
                 verticalPosition: "top",
                 horizontalPosition: "center",
               });
             } else {
-              this.matSnackBar.open("An error occurred while modifying. The action was therefore canceled", "x", {
+              this.matSnackBar.open("Une erreur est survenue lors de la sauvegarde. Les changements n'ont pas pu être enregistrés", "x", {
                 duration: 3000,
                 verticalPosition: "top",
                 horizontalPosition: "center",

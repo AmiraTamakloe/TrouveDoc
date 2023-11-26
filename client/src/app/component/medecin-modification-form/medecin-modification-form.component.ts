@@ -55,7 +55,7 @@ export class MedecinModificationFormComponent implements OnInit {
   onSubmit(): void {
     const regex = /^[a-zA-ZÀ-ÿ]+(?:-[a-zA-ZÀ-ÿ]+)?$/;
     if (!regex.test(this.medecinForm.controls["nom"].value)) {
-      this.matSnackBar.open("Le nom ne doit pas contenir de chiffre ou de caractère spéciaux", "x", {
+      this.matSnackBar.open("Le nom ne doit pas contenir de chiffre ou de caractère spéciaux. Les noms de famille composé d'un seul trait d'union sont accepté", "x", {
         duration: 4000,
         verticalPosition: "top",
         horizontalPosition: "center",
