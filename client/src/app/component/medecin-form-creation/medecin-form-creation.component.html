@@ -1,30 +1,36 @@
+<h2 mat-dialog-title>Création d'un médecin</h2>
+<br> <br> <br>
 <form [formGroup]="medecinForm" (ngSubmit)="onSubmit()">
-  <label for="idservice">Service : </label>
-  <select id="idservice" formControlName="idservice" required>
-    <option *ngFor="let service of services" [value]="service.idservice">
+  <mat-form-field>
+  <mat-label for="idservice">Service : </mat-label>
+  <mat-select id="idservice" formControlName="idservice" required>
+    <mat-option *ngFor="let service of services" [value]="service.idservice">
       {{ service.idservice }}
-    </option>
-  </select>
-
-  <label for="specialite">Spécialité: </label>
-  <select id="specialite" formControlName="specialite" required>
-    <option *ngFor="let service of services" [value]="service.nomservice">
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br> 
+<mat-form-field>
+  <mat-label for="specialite">Spécialité: </mat-label>
+  <mat-select id="specialite" formControlName="specialite" required>
+    <mat-option *ngFor="let service of services" [value]="service.nomservice">
       {{ service.nomservice }}
-    </option>
-  </select>
-
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br> 
   <label for="prenom">Prénom : </label>
   <input id="prenom" type="text" formControlName="prenom" />
-
+  <br> <br> <br>
   <label for="nom">Nom : </label>
   <input id="nom" type="text" formControlName="nom" />
-
+  <br> <br> <br>
   <label for="anneesexperience">Années experiences : </label>
   <input
     id="anneesexperience"
     type="number"
     formControlName="anneesexperience"
   />
+  <br> <br>
   <button type="submit" [disabled]="!medecinForm.valid">Soumettre le formulaire</button>
 </form>
-<hr />
