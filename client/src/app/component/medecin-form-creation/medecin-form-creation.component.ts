@@ -36,7 +36,6 @@ export class MedecinFormCreationComponent implements OnInit {
   async fetchData() {
     this.communicationService.getServices().subscribe((services: Service[]) => {
       this.services = services;
-      console.log(this.services);
       this.medecinForm.controls.idservice.setValue(this.services[0].idservice);
       this.medecinForm.controls.specialite.setValue(this.services[0].nomservice);
     });

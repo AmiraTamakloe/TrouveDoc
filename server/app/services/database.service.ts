@@ -61,9 +61,7 @@ export class DatabaseService {
   public async updateMedecinInfo(medecin: any): Promise<pg.QueryResult> {
     const client: pg.PoolClient = await this.pool.connect();
     const query: string = `UPDATE Hopital_BD.Medecins SET prenom = '${medecin.prenom}', nom = '${medecin.nom}', specialite = '${medecin.specialite}', anneesExperience = ${medecin.anneesexperience}, idService = ${medecin.idservice} WHERE idMedecin = ${medecin.idmedecin}`;
-    console.log(query);
     const result: pg.QueryResult = await this.pool.query(query);
-    console.log(result);
     client.release();
     return result;
   }
