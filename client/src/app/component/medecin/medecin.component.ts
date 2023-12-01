@@ -15,7 +15,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class MedecinComponent implements OnInit {
 
-  displayedColumns: string[] = ["prenom", "nom", "specialite", "anneesExperience", "service", "actions"];
+  displayedColumns: string[] = ["id", "prenom", "nom", "specialite", "anneesExperience", "service", "actions"];
   medecins: MatTableDataSource<Medecin>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 

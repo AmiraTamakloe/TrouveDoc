@@ -1,5 +1,9 @@
 <button mat-raised-button color="primary" routerLink="/create"  class="buttonAdd">+ Ajouter un médecin</button>
 <table mat-table [dataSource]="medecins" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Identifiant</th>
+    <td mat-cell *matCellDef="let medecin">{{ medecin.idmedecin }}</td>
+  </ng-container>
   <ng-container matColumnDef="prenom">
     <th mat-header-cell *matHeaderCellDef>Prénom</th>
     <td mat-cell *matCellDef="let medecin">{{ medecin.prenom }}</td>
