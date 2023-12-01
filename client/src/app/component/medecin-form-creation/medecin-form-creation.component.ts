@@ -12,6 +12,9 @@ import { CommunicationService } from 'src/app/services/communication.service';
   styleUrls: ['./medecin-form-creation.component.css']
 })
 export class MedecinFormCreationComponent implements OnInit {
+  Prenom: string = "John";
+  Nom: string = "Doe";
+  Age: string = "10";
 
   services: Service[];
   medecinForm = this.formBuilder.group({

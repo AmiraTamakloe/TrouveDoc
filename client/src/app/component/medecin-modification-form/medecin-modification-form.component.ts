@@ -13,8 +13,12 @@ import { ConfirmationPopUpComponent } from "../confirmation-pop-up/confirmation-
   styleUrls: ["./medecin-modification-form.component.css"],
 })
 export class MedecinModificationFormComponent implements OnInit {
+
   medecinForm: FormGroup;
   services: Service[];
+
+ 
+
 
   constructor(
     private formBuilder: FormBuilder,

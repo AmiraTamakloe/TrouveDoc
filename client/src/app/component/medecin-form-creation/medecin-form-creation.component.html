@@ -11,13 +11,13 @@
 </mat-form-field>
 <br> 
   <label for="prenom">Prénom : </label>
-  <input id="prenom" maxlength="25" type="text" formControlName="prenom"  placeholder=" John" />
+  <input id="prenom" maxlength="25" type="text" formControlName="prenom"   [(ngModel)]="Prenom" />
   <br> <br> <br>
   <label for="nom">Nom : </label>
-  <input id="nom" maxlength="25"  type="text" formControlName="nom" placeholder=" Doe" />
+  <input id="nom" maxlength="25"  type="text" formControlName="nom" [(ngModel)]="Nom" />
   <br> <br> <br>
   <label for="anneesexperience">Années experiences : </label>
-  <input placeholder= "10"
+  <input [(ngModel)]="Age"
     id="anneesexperience"
     type="number"
     formControlName="anneesexperience"
