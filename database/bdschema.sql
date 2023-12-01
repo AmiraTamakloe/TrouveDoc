@@ -1,5 +1,5 @@
 -- Veuillez créer une BD de nom Hopital_BD et y créer les tables Services et Medecins.
--- Commenter Create Database Hopital_BD si la BD existe déjà. Attention c'est case sensitive.
+-- Commenter Create Database Hopital_BD si vous l'avez créer manuellement dans pgAdmin4. Attention c'est case sensitive.
 CREATE DATABASE Hopital_BD;
 DROP SCHEMA IF EXISTS Hopital_BD CASCADE;
 CREATE SCHEMA IF NOT EXISTS Hopital_BD;

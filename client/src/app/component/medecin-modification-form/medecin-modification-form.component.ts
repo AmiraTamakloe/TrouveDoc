@@ -27,6 +27,15 @@ export class MedecinModificationFormComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     await this.fetchServices();
     this.initForm();
+    this.medecinForm.get('specialite')?.valueChanges.subscribe((selectedSpecialite: string) => {
+      const selectedService = this.services.find((service) => service.nomservice === selectedSpecialite);
+      if (selectedService) {
+        this.medecinForm.patchValue({
+          idservice: selectedService.idservice,
+          specialite: selectedService.nomservice,
+        });
+      }
+    });
   }
 
   async fetchServices() {

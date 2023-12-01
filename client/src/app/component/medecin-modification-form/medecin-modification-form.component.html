@@ -1,24 +1,13 @@
 <h2 mat-dialog-title>Modification d'informations</h2>
 <mat-dialog-content>
   <form [formGroup]="medecinForm" (ngSubmit)="onSubmit()">
-    <label for="idservice" class="service">Service : </label>
-    <br/>
-    <mat-form-field>
-      <mat-label>Service </mat-label>
-    <mat-select id="idservice" formControlName="idservice" required class="valueService">
-      <mat-option *ngFor="let service of services" [value]="service.idservice">
-        {{ service.idservice }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-    <br>
     <label for="specialite">Spécialité : </label>
     <br>
     <mat-form-field>
       <mat-label>Spécialité</mat-label>
     <mat-select id="specialite" formControlName="specialite" required>
       <mat-option *ngFor="let service of services" [value]="service.nomservice">
-        {{ service.nomservice }}
+        {{ service.idservice }} - {{ service.nomservice }}
       </mat-option>
     </mat-select>
   </mat-form-field>

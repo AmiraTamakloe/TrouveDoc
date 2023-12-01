@@ -1,20 +1,11 @@
 <h2 mat-dialog-title>Création d'un médecin</h2>
 <br> <br> <br>
 <form [formGroup]="medecinForm" (ngSubmit)="onSubmit()">
-  <mat-form-field>
-  <mat-label for="idservice">Service : </mat-label>
-  <mat-select id="idservice" formControlName="idservice" required>
-    <mat-option *ngFor="let service of services" [value]="service.idservice">
-      {{ service.idservice }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<br> 
 <mat-form-field>
   <mat-label for="specialite">Spécialité: </mat-label>
   <mat-select id="specialite" formControlName="specialite" required>
     <mat-option *ngFor="let service of services" [value]="service.nomservice">
-      {{ service.nomservice }}
+      {{service.idservice}} - {{ service.nomservice }}
     </mat-option>
   </mat-select>
 </mat-form-field>
