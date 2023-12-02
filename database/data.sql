@@ -15,13 +15,13 @@ VALUES
 -- Medecins
 INSERT INTO Hopital_BD.Medecins ( prenom, nom, specialite, anneesExperience, idService)
 VALUES
-    ('Marie', 'Rousseau', 'Dermatologie', 8, 3),
-    ('Philippe', 'Lemelin', 'Neurologie', 6, 4),
-    ('Valérie', 'Bélanger', 'Ophtalmologie', 10, 1),
-    ('Alex', 'Michaud', 'Orthopédie', 12, 2),
-    ('Nathalie', 'Gagné', 'Psychiatrie', 9, 3),
-    ('Simon', 'Tremblay', 'Cardiologie', 15, 4),
-    ('Audrey', 'Beaulieu', 'Pédiatrie', 7, 1),
-    ('David', 'Fournier', 'Chirurgie', 11, 2),
-    ('Isabelle', 'Lapointe', 'Gynécologie', 14, 3),
-    ('François', 'Martel', 'Radiologie', 5, 4);
+    ('Marie', 'Rousseau', 'Dermatologie', 8, 0),
+    ('Philippe', 'Lemelin', 'Neurologie', 6, 1),
+    ('Valérie', 'Bélanger', 'Ophtalmologie', 10, 2),
+    ('Alex', 'Michaud', 'Orthopédie', 12, 3),
+    ('Nathalie', 'Gagné', 'Psychiatrie', 9, 4),
+    ('Simon', 'Tremblay', 'Cardiologie', 15, 5),
+    ('Audrey', 'Beaulieu', 'Pédiatrie', 7, 6),
+    ('David', 'Fournier', 'Chirurgie', 11, 7),
+    ('Isabelle', 'Lapointe', 'Gynécologie', 14, 8),
+    ('François', 'Martel', 'Radiologie', 5, 9);
